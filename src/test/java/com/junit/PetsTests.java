@@ -1,12 +1,26 @@
 package com.junit;
 
+import api.PetsData;
+
+import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.List;
+
+import static io.restassured.RestAssured.given;
+
 
 public class PetsTests {
+    private final static String URL = "https://petstore.swagger.io/v2";
     @Test
-    void test() {
-        assertTrue(false);
+    public void getPetByStatusSold(){
+        List<PetsData> pets = given()
+                .when()
+                .contentType(ContentType.JSON)
+                .get(URL+"/pet/findByStatus?status=sold")
+                .then().log().all()
+                .extract().body().jsonPath().getList("$", PetsData.class);
+
     }
+
 }
