@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="Updates 3006">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="2 testcase">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAvailable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,30 @@
     &quot;last_opened_file_path&quot;: &quot;/home/artem.makhov/PetStore-Automation-main&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.PetByStatusPending">
+  <component name="RunManager" selected="Gradle.PetStore [build]">
+    <configuration name="PetByStatusAvailable.getPetByStatusAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.junit.PetByStatusAvailable.getPetByStatusAvailable&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="PetByStatusPending" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -146,29 +168,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PetsTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.junit.PetsByStatusSold&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="PetsTests.getPetByStatusSold (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -193,19 +192,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.PetByStatusAvailable.getPetByStatusAvailable" />
       <item itemvalue="Gradle.PetByStatusPending" />
       <item itemvalue="Gradle.PetByStatusSold" />
-      <item itemvalue="Gradle.PetsTests" />
       <item itemvalue="Gradle.PetsTests.getPetByStatusSold (1)" />
       <item itemvalue="Gradle.PetStore [build]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.PetStore [build]" />
+        <item itemvalue="Gradle.PetByStatusAvailable.getPetByStatusAvailable" />
         <item itemvalue="Gradle.PetByStatusPending" />
         <item itemvalue="Gradle.PetByStatusSold" />
         <item itemvalue="Gradle.PetsTests.getPetByStatusSold (1)" />
-        <item itemvalue="Gradle.PetsTests" />
-        <item itemvalue="Gradle.PetStore [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +273,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656613946248</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2 testcase">
+      <created>1656615243299</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656615243299</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2 testcase">
+      <created>1656615356727</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656615356727</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -292,6 +305,7 @@
     <MESSAGE value="First" />
     <MESSAGE value="Second" />
     <MESSAGE value="Updates 3006" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates 3006" />
+    <MESSAGE value="2 testcase" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 testcase" />
   </component>
 </project>
