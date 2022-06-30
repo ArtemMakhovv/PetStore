@@ -1,13 +1,15 @@
 package com.junit;
 
 import api.PetsData;
-
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.notNullValue;
 
 
 public class PetsTests {
@@ -20,6 +22,9 @@ public class PetsTests {
                 .get(URL+"/pet/findByStatus?status=sold")
                 .then().log().all()
                 .extract().response().jsonPath().getList(".", PetsData.class);
+
+
+        int i =0;
 
     }
 
