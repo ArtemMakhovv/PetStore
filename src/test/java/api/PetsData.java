@@ -8,13 +8,14 @@ public class PetsData {
     private Long id;
     private Category category;
     private String name;
-    private List<String> photoUrls = null;
-    private List<Tag> tags = null;
+    private List<String> photoUrls;
+    private List<Tag> tags;
     private String status;
 
     public Long getId() {
         return id;
     }
+
 
     public void setId(Long id) {
         this.id = id;
