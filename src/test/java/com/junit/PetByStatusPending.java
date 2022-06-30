@@ -23,7 +23,7 @@ public class PetByStatusPending {
                 .spec(REQ_SPEC)
                 .when()
                 .get("/pet/findByStatus?status=pending")
-                .then().log().all()
+                .then()
                 .statusCode(200)
                 .header("access-control-allow-headers", "Content-Type, api_key, Authorization")
                 .header("access-control-allow-methods", "GET, POST, DELETE, PUT")
