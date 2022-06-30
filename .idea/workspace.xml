@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="Updates 3006">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
     "last_opened_file_path": "/home/artem.makhov/PetStore-Automation-main"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.PetsTests">
+  <component name="RunManager" selected="Gradle.PetsTests.getPetByStatusSold (1)">
     <configuration name="PetStore [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -146,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PetsTests" />
         <item itemvalue="Gradle.PetsTests.getPetByStatusSold (1)" />
+        <item itemvalue="Gradle.PetsTests" />
         <item itemvalue="Gradle.PetStore [build]" />
       </list>
     </recent_temporary>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656604723355</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updates 3006">
+      <created>1656608210239</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656608210239</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,8 +235,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
+          <line>42</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
