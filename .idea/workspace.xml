@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="Second">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="Updates 3006">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +76,7 @@
     "last_opened_file_path": "/home/artem.makhov/PetStore-Automation-main"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.PetsTests.getPetByStatusSold (1)">
+  <component name="RunManager" selected="Gradle.PetsTests">
     <configuration name="PetStore [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -151,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PetsTests.getPetByStatusSold (1)" />
         <item itemvalue="Gradle.PetsTests" />
+        <item itemvalue="Gradle.PetsTests.getPetByStatusSold (1)" />
         <item itemvalue="Gradle.PetStore [build]" />
       </list>
     </recent_temporary>
@@ -194,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656575369970</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updates 3006">
+      <created>1656597634722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656597634722</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,14 +213,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First" />
     <MESSAGE value="Second" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second" />
+    <MESSAGE value="Updates 3006" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates 3006" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/junit/PetsTests.java</url>
-          <line>26</line>
+          <line>31</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
