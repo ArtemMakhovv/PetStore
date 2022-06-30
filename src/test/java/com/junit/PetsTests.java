@@ -19,7 +19,7 @@ public class PetsTests {
                 .contentType(ContentType.JSON)
                 .get(URL+"/pet/findByStatus?status=sold")
                 .then().log().all()
-                .extract().body().jsonPath().getList("$", PetsData.class);
+                .extract().response().jsonPath().getList(".", PetsData.class);
 
     }
 
