@@ -34,7 +34,7 @@ public class PetByStatusAll {
                 .header("content-type", "application/json")
                 .extract().response().jsonPath().getList(".", PetsData.class);
 
-        pets.forEach((n)-> assertThat("Check that status is equal PENDING", n.getStatus(),is(in(Arrays.asList("available", "pending", "sold")))) );
+        pets.forEach((n)-> assertThat("Check that status can be Available, Pending, Sold", n.getStatus(),is(in(Arrays.asList("available", "pending", "sold")))) );
 
 
 
