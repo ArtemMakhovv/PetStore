@@ -4,16 +4,17 @@ import api.PetsData;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.in;
-import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.*;
 
 public class PetByStatusAll {
 
@@ -34,9 +35,13 @@ public class PetByStatusAll {
                 .header("content-type", "application/json")
                 .extract().response().jsonPath().getList(".", PetsData.class);
 
-        pets.forEach((n)-> assertThat("Check that status can be Available, Pending, Sold", n.getStatus(),is(in(Arrays.asList("available", "pending", "sold")))) );
+        List<String> status = new ArrayList<>();
+        pets.forEach(n-> status.add(n.getStatus()));
 
-
+        assertThat("Check that status can be Available, Pending, Sold", status, everyItem(is(in(Arrays.asList("available", "pending", "sold")))));
+        assertThat("Check that status contain Available", status, hasItem("available"));
+        assertThat("Check that status contain Pending", status, hasItem("pending"));
+        assertThat("Check that status contain Sold", status, hasItem("sold"));
 
 
 

@@ -1,11 +1,16 @@
 package com.junit;
 
 import api.PetsData;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -20,6 +25,9 @@ public class PetByStatusSold {
             .setContentType(ContentType.JSON)
             .build();
     @Test
+    @Owner("Artem Makhov")
+    @DisplayName("Получение питомцев со статусом SOLD")
+    @Description("Найти питомцев по статусу SOLD. Метод GET. Проверка заголовков, статус ответа и то что все записи имеют статус sold")
     public void getPetByStatusSold(){
         List<PetsData> pets = given()
                 .spec(REQ_SPEC)
@@ -32,7 +40,9 @@ public class PetByStatusSold {
                 .header("content-type", "application/json")
                 .extract().response().jsonPath().getList(".", PetsData.class);
 
-        pets.forEach((n)-> assertThat("Check that status is equal SOLD", n.getStatus(),is("sold")) );
+        List<String> status = new ArrayList<>();
+        pets.forEach(n-> status.add(n.getStatus()));
+        assertThat("Check that status is equal SOLD for every Items", status, everyItem(is("sold")));
 
 
 
