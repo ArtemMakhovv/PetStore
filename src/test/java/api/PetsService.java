@@ -1,5 +1,6 @@
 package api;
 
+import io.qameta.allure.Attachment;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -19,7 +20,7 @@ public class PetsService {
         return given()
                 .spec(REQ_SPEC)
                 .when()
-                .get("/pet/findByStatus?status=sold")
-                .then()
+                .get("/pet/findByStatus?status="+status)
+                .then().extract().response();
     }
 }

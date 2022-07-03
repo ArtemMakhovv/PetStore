@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="3 testcase">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/PetsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="0307">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +89,7 @@
     "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PetByStatusSold.getPetByStatusSold">
+  <component name="RunManager" selected="Gradle.PetStore [allureServe]">
     <configuration name="PetStore [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -137,21 +132,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PetByStatusAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PetStore.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.junit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.junit" />
-      <option name="MAIN_CLASS_NAME" value="com.junit.PetByStatusAll" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PetByStatusAll.getPetByStatusAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PetStore.test" />
       <extension name="coverage">
@@ -164,6 +144,21 @@
       <option name="MAIN_CLASS_NAME" value="com.junit.PetByStatusAll" />
       <option name="METHOD_NAME" value="getPetByStatusAll" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetByStatusSold" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PetStore.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.junit.PetByStatusSold" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,17 +182,17 @@
     <list>
       <item itemvalue="Gradle.PetStore [allureServe]" />
       <item itemvalue="Gradle.PetStore [test]" />
+      <item itemvalue="JUnit.PetByStatusSold" />
       <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
-      <item itemvalue="JUnit.PetByStatusAll" />
       <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
         <item itemvalue="Gradle.PetStore [allureServe]" />
-        <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
+        <item itemvalue="JUnit.PetByStatusSold" />
+        <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
         <item itemvalue="Gradle.PetStore [test]" />
-        <item itemvalue="JUnit.PetByStatusAll" />
+        <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656751071165</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="0307">
+      <created>1656845509756</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656845509756</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,18 +323,8 @@
     <MESSAGE value="Updates 3006" />
     <MESSAGE value="2 testcase" />
     <MESSAGE value="3 testcase" />
-    <option name="LAST_COMMIT_MESSAGE" value="3 testcase" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="0307" />
+    <option name="LAST_COMMIT_MESSAGE" value="0307" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
