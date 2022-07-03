@@ -5,6 +5,7 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -29,9 +30,13 @@ public class PetsSteps extends PetsService {
         return statuses;
     }
     @Step ("Проверка что все найденные питомцы имеют корректный статус {status}")
-    public PetsSteps assertPetsStatus(List<String> statuses, String status){
-    assertThat("Check that status is equal {status} for every Items", statuses, everyItem(is(status)));
+    public PetsSteps assertPetsStatus(List<String> statuses, List status){
+    assertThat("Check that status is equal {status} for every Items", statuses, everyItem(is(in(status))));
     return this;
+    }
+    @Step ("Проверка что поиск с несколькими статусами возвращает записи со статусом {status}")
+    public void assertPetsSeveralStatus(List<String> statuses, String status){
+        assertThat("Check that list of statuses contains status = {status}", statuses, hasItem(status));
     }
     @Step ("Проверка что статус код ответа {expectedStatusCode}")
     public void assertSCodeAndHeaders(Integer expectedStatusCode, Response response) {

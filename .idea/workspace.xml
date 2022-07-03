@@ -9,6 +9,9 @@
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAvailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAvailable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,26 +114,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PetStore [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+    <configuration name="PetByStatusAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PetStore.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.junit.PetByStatusAll" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="PetByStatusAll.getPetByStatusAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PetStore.test" />
@@ -181,18 +178,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.PetStore [allureServe]" />
-      <item itemvalue="Gradle.PetStore [test]" />
       <item itemvalue="JUnit.PetByStatusSold" />
       <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
+      <item itemvalue="JUnit.PetByStatusAll" />
       <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.PetStore [allureServe]" />
+        <item itemvalue="JUnit.PetByStatusAll" />
         <item itemvalue="JUnit.PetByStatusSold" />
-        <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
-        <item itemvalue="Gradle.PetStore [test]" />
         <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
+        <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656845509756</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="0307">
+      <created>1656854391634</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656854391634</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

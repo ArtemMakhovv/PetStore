@@ -5,10 +5,12 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 import java.util.List;
 
 
-
+@DisplayName("Проверка питомцев со статусом SOLD")
 public class PetByStatusSold {
 
     private final PetsSteps petsSteps = new PetsSteps();
@@ -20,7 +22,7 @@ public class PetByStatusSold {
 
         List pets = petsSteps.getPetByStatus("sold");
         List <String> statuses = petsSteps.getStatuses(pets);
-        petsSteps.assertPetsStatus(statuses, "sold");
+        petsSteps.assertPetsStatus(statuses, Arrays.asList("sold"));
 
     }
 

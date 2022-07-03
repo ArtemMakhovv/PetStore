@@ -17,10 +17,20 @@ public class PetsService {
             .build();
 
     public Response getPetsByStatus(String status) {
-        return given()
-                .spec(REQ_SPEC)
-                .when()
-                .get("/pet/findByStatus?status="+status)
-                .then().extract().response();
+            return given()
+                    .spec(REQ_SPEC)
+                    .when()
+                    .get("/pet/findByStatus?status="+addSeveralStatus(status))
+                    .then().extract().response();
+    }
+
+    private String addSeveralStatus (String status){
+        if (status.contains(",")) {
+            status.replace(",", "&status=");
+            return status;
+        }
+        else {
+            return status;
+        }
     }
 }
