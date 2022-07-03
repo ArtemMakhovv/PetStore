@@ -29,21 +29,37 @@ public class PetsSteps extends PetsService {
         pets.forEach(n-> statuses.add(n.getStatus()));
         return statuses;
     }
+
     @Step ("Проверка что все найденные питомцы имеют корректный статус {status}")
     public PetsSteps assertPetsStatus(List<String> statuses, List status){
     assertThat("Check that status is equal {status} for every Items", statuses, everyItem(is(in(status))));
     return this;
     }
+
     @Step ("Проверка что поиск с несколькими статусами возвращает записи со статусом {status}")
     public void assertPetsSeveralStatus(List<String> statuses, String status){
         assertThat("Check that list of statuses contains status = {status}", statuses, hasItem(status));
     }
+
     @Step ("Проверка что статус код ответа {expectedStatusCode}")
     public void assertSCodeAndHeaders(Integer expectedStatusCode, Response response) {
         assertThat("Check that response status code equals {expectedStatusCode}", response.statusCode(), equalTo(expectedStatusCode));
         assertThat("Check header access-control-allow-headers",response.getHeader("access-control-allow-headers"), equalTo("Content-Type, api_key, Authorization"));
         assertThat("Check header access-control-allow-methods",response.getHeader("access-control-allow-methods"), equalTo("GET, POST, DELETE, PUT"));
         assertThat("Check header content-type",response.getHeader("content-type"), equalTo("application/json"));
-
     }
+
+    @Step ("Отправить Options запрос  и получить список доступных методов для {path}")
+    @Attachment
+    public String getAllowMethods (String path){
+        Response response = sendOptionsReq(path);
+        return response.getHeader("Allow");
+    }
+
+    @Step ("Проверка доступных методов")
+    public void assertAllowMethods (String expectedMethods, String allowMethods){
+        assertThat("Check that received methods are correct", allowMethods, equalTo(expectedMethods));
+    }
+
+
 }

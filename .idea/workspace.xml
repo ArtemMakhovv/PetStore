@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="0307">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/junit/CheckOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAvailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusAvailable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusPending.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PetByStatusSold.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +110,21 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CheckOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PetStore.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.junit.CheckOptions" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PetByStatusAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PetStore.test" />
       <extension name="coverage">
@@ -160,36 +171,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetByStatusSold.getPetByStatusSold" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PetStore.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.junit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.junit" />
-      <option name="MAIN_CLASS_NAME" value="com.junit.PetByStatusSold" />
-      <option name="METHOD_NAME" value="getPetByStatusSold" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Gradle.PetStore [allureServe]" />
+      <item itemvalue="JUnit.CheckOptions" />
       <item itemvalue="JUnit.PetByStatusSold" />
-      <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
       <item itemvalue="JUnit.PetByStatusAll" />
       <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.PetStore [allureServe]" />
+        <item itemvalue="JUnit.CheckOptions" />
         <item itemvalue="JUnit.PetByStatusAll" />
         <item itemvalue="JUnit.PetByStatusSold" />
         <item itemvalue="JUnit.PetByStatusAll.getPetByStatusAll" />
-        <item itemvalue="JUnit.PetByStatusSold.getPetByStatusSold" />
       </list>
     </recent_temporary>
   </component>
@@ -307,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656854391634</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="0307">
+      <created>1656859522472</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656859522472</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

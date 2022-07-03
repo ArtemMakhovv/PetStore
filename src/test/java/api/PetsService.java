@@ -33,4 +33,11 @@ public class PetsService {
             return status;
         }
     }
+    public Response sendOptionsReq (String path){
+        return given()
+                .spec(REQ_SPEC)
+                .when()
+                .options(path)
+                .then().extract().response();
+    }
 }
