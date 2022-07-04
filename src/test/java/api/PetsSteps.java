@@ -3,15 +3,14 @@ package api;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
+import org.assertj.core.api.Assertions;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.equalTo;
+import static org.assertj.core.api.Assertions.*;
 
 public class PetsSteps extends PetsService {
 
@@ -83,6 +82,7 @@ public class PetsSteps extends PetsService {
     @Step ("Проверка тела ответа POST")
     public void assertPostBody (PetsData body, PetsData pet){
         assertThat("Check that pet ID from request equal pet ID from response ",body.getId(),equalTo(pet.getId()));
+        Assertions.assertThat(body).isEqualToComparingFieldByFieldRecursively(pet);
     }
 
 }
