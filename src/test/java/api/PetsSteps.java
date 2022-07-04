@@ -3,6 +3,7 @@ package api;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,7 @@ public class PetsSteps extends PetsService {
     @Attachment
     public List<PetsData> getPetByStatus(String status) {
         Response response = getPetsByStatus(status);
-        assertSCodeAndHeaders(200, response);
+        assertSCode(200, response);
         return response.jsonPath().getList(".", PetsData.class);
     }
 
@@ -42,8 +43,11 @@ public class PetsSteps extends PetsService {
     }
 
     @Step ("Проверка что статус код ответа {expectedStatusCode}")
-    public void assertSCodeAndHeaders(Integer expectedStatusCode, Response response) {
+    public void assertSCode(Integer expectedStatusCode, Response response) {
         assertThat("Check that response status code equals {expectedStatusCode}", response.statusCode(), equalTo(expectedStatusCode));
+  }
+    @Step ("Проверка что заголовков ответа")
+    public void assertHeaders(Response response) {
         assertThat("Check header access-control-allow-headers",response.getHeader("access-control-allow-headers"), equalTo("Content-Type, api_key, Authorization"));
         assertThat("Check header access-control-allow-methods",response.getHeader("access-control-allow-methods"), equalTo("GET, POST, DELETE, PUT"));
         assertThat("Check header content-type",response.getHeader("content-type"), equalTo("application/json"));
@@ -53,6 +57,7 @@ public class PetsSteps extends PetsService {
     @Attachment
     public String getAllowMethods (String path){
         Response response = sendOptionsReq(path);
+        assertSCode(204, response);
         return response.getHeader("Allow");
     }
 
@@ -61,5 +66,23 @@ public class PetsSteps extends PetsService {
         assertThat("Check that received methods are correct", allowMethods, equalTo(expectedMethods));
     }
 
+    @Step ("Отправка недопустимого POST запроса и проверка статуса ответа")
+    public void postNotAllowMethods (String path){
+        Response response = notAllowedPost(path);
+        assertSCode(405, response);
+    }
+
+    @Step ("Добавление нового питомца метод POST")
+    @Attachment
+    public PetsData crateNewPet (PetsData pet){
+        Response response = postNewPet(pet);
+        assertSCode(200,response);
+        return response.body().as(PetsData.class);
+    }
+
+    @Step ("Проверка тела ответа POST")
+    public void assertPostBody (PetsData body, PetsData pet){
+        assertThat("Check that pet ID from request equal pet ID from response ",body.getId(),equalTo(pet.getId()));
+    }
 
 }

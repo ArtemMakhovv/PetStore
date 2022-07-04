@@ -6,8 +6,6 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.List;
 
 @DisplayName("Проверка доступных методов для https://petstore.swagger.io/v2/pet/findByStatus")
 public class CheckOptions {
@@ -21,5 +19,13 @@ public class CheckOptions {
     public void getAllowMethods(){
        String allMethods = petsSteps.getAllowMethods("/pet/findByStatus");
        petsSteps.assertAllowMethods("OPTIONS,HEAD,GET", allMethods);
+    }
+
+    @Test
+    @Owner("Artem Makhov")
+    @DisplayName("Невалидный запрос с методом POST для https://petstore.swagger.io/v2/pet/findByStatus")
+    @Description("Отправка не допустимого POST запроса для https://petstore.swagger.io/v2/pet/findByStatus и проверка ответа")
+    public void postToFindByStatus(){
+        petsSteps.postNotAllowMethods("/pet/findByStatus?status=sold");
     }
 }
