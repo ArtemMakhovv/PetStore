@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="0307 2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/api/PetDataGeneration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/junit/PostPets.java" afterDir="false" />
+    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="0407 2">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/CheckOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/CheckOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetDataGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetDataGeneration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,9 +83,9 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/home/artem.makhov/IdeaProjects/PetStore",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RunManager" selected="Gradle.PetStore [allureServe]">
@@ -327,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656867762628</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="0407 2">
+      <created>1656917590166</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656917590166</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,15 +350,16 @@
     <MESSAGE value="3 testcase" />
     <MESSAGE value="0307" />
     <MESSAGE value="0307 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="0307 2" />
+    <MESSAGE value="0407 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="0407 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/junit/PostPets.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="13" />
+          <line>26</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
