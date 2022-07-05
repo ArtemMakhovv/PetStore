@@ -1,11 +1,9 @@
 package api;
 
-import io.qameta.allure.Attachment;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import netscape.javascript.JSObject;
 
 import static io.restassured.RestAssured.given;
 
