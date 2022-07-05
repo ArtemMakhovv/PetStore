@@ -1,5 +1,7 @@
 package api;
 
+import api.Models.PetsData;
+import api.Models.ResponseBody;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
@@ -11,7 +13,6 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.assertj.core.api.Assertions.*;
 
 public class PetsSteps extends PetsService {
 
@@ -79,6 +80,21 @@ public class PetsSteps extends PetsService {
         assertHeaders(response);
         Allure.addAttachment("CreatedPet",response.body().as(PetsData.class).toString());
         return response.body().as(PetsData.class);
+    }
+
+    @Step ("Добавление нового питомца метод POST с невалидным body")
+    public Response postBadPet (Object pet){
+        Response response = postNewPet(pet);
+        assertSCode(400,response);
+        return response;
+    }
+
+    @Step ("Проверка типа и сообщения ответа для невалидного запроса")
+    public void assertBadRequestBody (Response response, String expectedType, String expectedMessage){
+        String resType = response.body().as(ResponseBody.class).getType();
+        String resMessage = response.body().as(ResponseBody.class).getMessage();
+        assertThat("Check type of response", resType, equalTo(expectedType));
+        assertThat("Check type of response", resMessage, equalTo(expectedMessage));
     }
 
     @Step ("Проверка тела ответа / питомца")

@@ -1,5 +1,8 @@
-package api;
+package api.Data;
 
+import api.Models.Category;
+import api.Models.PetsData;
+import api.Models.Tag;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.util.Arrays;

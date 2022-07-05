@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="0407 4">
+    <list default="true" id="cabd7f64-b7a0-4fa0-b11b-fc561e54717b" name="Changes" comment="0507 1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/Data/InvalidData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/Models/ResponseBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Models/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetDataGeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Data/PetDataGeneration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Models/PetsData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/PetsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Models/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/junit/PostPets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/junit/PostPets.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +86,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/artem.makhov/IdeaProjects/PetStore",
+    "last_opened_file_path": "/home/artem.makhov/Downloads/petstore-rest-assured-master",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
@@ -131,21 +136,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ArtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PetStore.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.junit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.junit" />
-      <option name="MAIN_CLASS_NAME" value="com.junit.ArtTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PetByStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PetStore.test" />
       <extension name="coverage">
@@ -176,10 +166,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PostPets.postInvalidNewPet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PetStore.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.junit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.junit" />
+      <option name="MAIN_CLASS_NAME" value="com.junit.PostPets" />
+      <option name="METHOD_NAME" value="postInvalidNewPet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.PetStore [allureServe]" />
       <item itemvalue="Gradle.PetStore [test]" />
-      <item itemvalue="JUnit.ArtTest" />
+      <item itemvalue="JUnit.PostPets.postInvalidNewPet" />
       <item itemvalue="JUnit.PetByStatus" />
       <item itemvalue="JUnit.PostPets" />
     </list>
@@ -187,9 +193,9 @@
       <list>
         <item itemvalue="Gradle.PetStore [allureServe]" />
         <item itemvalue="Gradle.PetStore [test]" />
+        <item itemvalue="JUnit.PostPets.postInvalidNewPet" />
         <item itemvalue="JUnit.PostPets" />
         <item itemvalue="JUnit.PetByStatus" />
-        <item itemvalue="JUnit.ArtTest" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656967315807</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="0507 1">
+      <created>1657043754172</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1657043754172</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +380,8 @@
     <MESSAGE value="0407 2" />
     <MESSAGE value="0407 3" />
     <MESSAGE value="0407 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="0407 4" />
+    <MESSAGE value="0507 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="0507 1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

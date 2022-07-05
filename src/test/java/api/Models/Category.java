@@ -1,4 +1,4 @@
-package api;
+package api.Models;
 import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Generated;
@@ -16,22 +16,22 @@ import lombok.Builder;
         "name"
 })
 @Generated("jsonschema2pojo")
-public class Tag {
+public class Category {
 
     @JsonProperty("id")
-    private Integer id;
+    private Long id;
     @JsonProperty("name")
     private String name;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("id")
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
