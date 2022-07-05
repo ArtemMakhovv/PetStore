@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-@DisplayName("Проверки создания новго питомца")
+@DisplayName("Проверки создания нового питомца")
 public class PostPets {
 
     private final PetsSteps petsSteps = new PetsSteps();
@@ -18,12 +18,15 @@ public class PostPets {
 
     @Test
     @Owner("Artem Makhov")
-    @DisplayName("Добавление ноого питомца с валидными данными")
-    @Description("Добавление ноого питомца с валидными данными. Метод POST. Проверка тела ответа и поиск новой записи")
+    @DisplayName("Добавление нового питомца с валидными данными")
+    @Description("Добавление нового питомца с валидными данными. Метод POST. Проверка тела ответа и поиск новой записи")
     public void postValidNewPet(){
 
         PetsData body = petsSteps.crateNewPet(dataOfPet);
-        petsSteps.assertPostBody(body,dataOfPet);
+        petsSteps.assertPetBody(body,dataOfPet);
+        PetsData petById = petsSteps.getPetById(body.getId());
+        petsSteps.assertPetBody(petById, dataOfPet);
+
     }
 
 

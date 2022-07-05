@@ -1,5 +1,6 @@
 package api;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
@@ -45,7 +46,7 @@ public class PetsSteps extends PetsService {
     public void assertSCode(Integer expectedStatusCode, Response response) {
         assertThat("Check that response status code equals {expectedStatusCode}", response.statusCode(), equalTo(expectedStatusCode));
   }
-    @Step ("Проверка что заголовков ответа")
+    @Step ("Проверка заголовков ответа")
     public void assertHeaders(Response response) {
         assertThat("Check header access-control-allow-headers",response.getHeader("access-control-allow-headers"), equalTo("Content-Type, api_key, Authorization"));
         assertThat("Check header access-control-allow-methods",response.getHeader("access-control-allow-methods"), equalTo("GET, POST, DELETE, PUT"));
@@ -72,17 +73,25 @@ public class PetsSteps extends PetsService {
     }
 
     @Step ("Добавление нового питомца метод POST")
-    @Attachment
     public PetsData crateNewPet (PetsData pet){
         Response response = postNewPet(pet);
         assertSCode(200,response);
+        assertHeaders(response);
+        Allure.addAttachment("CreatedPet",response.body().as(PetsData.class).toString());
         return response.body().as(PetsData.class);
     }
 
-    @Step ("Проверка тела ответа POST")
-    public void assertPostBody (PetsData body, PetsData pet){
-        assertThat("Check that pet ID from request equal pet ID from response ",body.getId(),equalTo(pet.getId()));
-        Assertions.assertThat(body).isEqualToComparingFieldByFieldRecursively(pet);
+    @Step ("Проверка тела ответа / питомца")
+    public void assertPetBody (PetsData body, PetsData pet){
+        Assertions.assertThat(body).as("Check that response body is equal request body").isEqualToComparingFieldByFieldRecursively(pet);
+    }
+
+    @Step ("Получить питомца по ID")
+    public PetsData getPetById (Long petId){
+        Response response = getPetByIds(petId);
+        assertSCode(200,response);
+        assertHeaders(response);
+        return response.body().as(PetsData.class);
     }
 
 }

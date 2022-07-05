@@ -56,4 +56,12 @@ public class PetsService {
                 .post("/pet")
                 .then().extract().response();
     }
+
+    public Response getPetByIds (Long petId){
+        return given()
+                .spec(REQ_SPEC)
+                .when()
+                .get("/pet/"+petId)
+                .then().extract().response();
+    }
 }
