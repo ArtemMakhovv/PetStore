@@ -62,4 +62,12 @@ public class PetsService {
                 .get("/pet/"+petId)
                 .then().extract().response();
     }
+
+    public Response deletePet(Long petId){
+        return given()
+                .spec(REQ_SPEC)
+                .when()
+                .delete("/pet/"+petId)
+                .then().extract().response();
+    }
 }

@@ -24,6 +24,14 @@ public class PetsSteps extends PetsService {
         return response.jsonPath().getList(".", PetsData.class);
     }
 
+    @Step ("Получить питомца по ID")
+    public PetsData getPetById (Long petId){
+        Response response = getPetByIds(petId);
+        assertSCode(200,response);
+        assertHeaders(response);
+        return response.body().as(PetsData.class);
+    }
+
     @Step ("Получение списка статусов для всех питомцев")
     @Attachment
     public List<String> getStatuses(List<PetsData> pets) {
@@ -32,11 +40,42 @@ public class PetsSteps extends PetsService {
         return statuses;
     }
 
-    @Step ("Проверка что все найденные питомцы имеют корректный статус {status}")
-    public PetsSteps assertPetsStatus(List<String> statuses, List status){
-    assertThat("Check that status is equal {status} for every Items", statuses, everyItem(is(in(status))));
-    return this;
+    @Step ("Добавление нового питомца метод POST с невалидным body")
+    public Response postBadPet (Object pet){
+        Response response = postNewPet(pet);
+        assertSCode(400,response);
+        return response;
     }
+
+    @Step ("Отправить Options запрос  и получить список доступных методов для {path}")
+    @Attachment
+    public String getAllowMethods (String path){
+        Response response = sendOptionsReq(path);
+        assertSCode(204, response);
+        return response.getHeader("Allow");
+    }
+
+    @Step ("Добавление нового питомца метод POST")
+    public PetsData crateNewPet (PetsData pet){
+        Response response = postNewPet(pet);
+        assertSCode(200,response);
+        assertHeaders(response);
+        Allure.addAttachment("CreatedPet",response.body().as(PetsData.class).toString());
+        return response.body().as(PetsData.class);
+    }
+
+    @Step ("Отправка недопустимого POST запроса и проверка статуса ответа")
+    public void postNotAllowMethods (String path){
+        Response response = notAllowedPost(path);
+        assertSCode(405, response);
+    }
+    @Step ("Удаление питомца по ID")
+    public Response deletePetById (Long petId, Integer statusCode){
+        Response response = deletePet(petId);
+        assertSCode(statusCode,response);
+        return response;
+    }
+
 
     @Step ("Проверка что поиск с несколькими статусами возвращает записи со статусом {status}")
     public void assertPetsSeveralStatus(List<String> statuses, String status){
@@ -54,47 +93,19 @@ public class PetsSteps extends PetsService {
         assertThat("Check header content-type",response.getHeader("content-type"), equalTo("application/json"));
     }
 
-    @Step ("Отправить Options запрос  и получить список доступных методов для {path}")
-    @Attachment
-    public String getAllowMethods (String path){
-        Response response = sendOptionsReq(path);
-        assertSCode(204, response);
-        return response.getHeader("Allow");
-    }
-
     @Step ("Проверка доступных методов")
     public void assertAllowMethods (String expectedMethods, String allowMethods){
         assertThat("Check that received methods are correct", allowMethods, equalTo(expectedMethods));
     }
 
-    @Step ("Отправка недопустимого POST запроса и проверка статуса ответа")
-    public void postNotAllowMethods (String path){
-        Response response = notAllowedPost(path);
-        assertSCode(405, response);
-    }
-
-    @Step ("Добавление нового питомца метод POST")
-    public PetsData crateNewPet (PetsData pet){
-        Response response = postNewPet(pet);
-        assertSCode(200,response);
-        assertHeaders(response);
-        Allure.addAttachment("CreatedPet",response.body().as(PetsData.class).toString());
-        return response.body().as(PetsData.class);
-    }
-
-    @Step ("Добавление нового питомца метод POST с невалидным body")
-    public Response postBadPet (Object pet){
-        Response response = postNewPet(pet);
-        assertSCode(400,response);
-        return response;
-    }
-
     @Step ("Проверка типа и сообщения ответа для невалидного запроса")
     public void assertBadRequestBody (Response response, String expectedType, String expectedMessage){
-        String resType = response.body().as(ResponseBody.class).getType();
-        String resMessage = response.body().as(ResponseBody.class).getMessage();
-        assertThat("Check type of response", resType, equalTo(expectedType));
-        assertThat("Check type of response", resMessage, equalTo(expectedMessage));
+            assertThat("Check that response body is not empty",response.body().asString().length(),greaterThan(0));
+            String resType = response.body().as(ResponseBody.class).getType();
+            String resMessage = response.body().as(ResponseBody.class).getMessage();
+            assertThat("Check type of response", resType, equalTo(expectedType));
+            assertThat("Check type of response", resMessage, equalTo(expectedMessage));
+
     }
 
     @Step ("Проверка тела ответа / питомца")
@@ -102,12 +113,10 @@ public class PetsSteps extends PetsService {
         Assertions.assertThat(body).as("Check that response body is equal request body").isEqualToComparingFieldByFieldRecursively(pet);
     }
 
-    @Step ("Получить питомца по ID")
-    public PetsData getPetById (Long petId){
-        Response response = getPetByIds(petId);
-        assertSCode(200,response);
-        assertHeaders(response);
-        return response.body().as(PetsData.class);
+    @Step ("Проверка что все найденные питомцы имеют корректный статус {status}")
+    public PetsSteps assertPetsStatus(List<String> statuses, List status){
+        assertThat("Check that status is equal {status} for every Items", statuses, everyItem(is(in(status))));
+        return this;
     }
 
 }
